@@ -1,0 +1,16 @@
+<h1>Welcome to the page for <%= @town.name %></h1>
+
+<h3>Useful information:</h3>
+
+<ul>
+  <li>This town is located in <%= @town.nation.name %></li>
+  <li>Do native speakers in this town speak English? <%= @town.native_language_english %></li>
+</ul>
+
+<h2>Other cities in this country:</h2>
+
+<ul>
+<% @town.nation.towns.each do |town| %>
+  <li><%= link_to town.name, town %></li>  
+<% end %>
+</ul>

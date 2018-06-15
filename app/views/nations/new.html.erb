@@ -1,0 +1,18 @@
+<h1>Add a new nation</h1>
+
+<%= form_for @nation do |f| %>
+
+  <%= f.label :name %><br>
+  <%= f.text_field :name %><br>
+
+  <%= f.label :continent %><br>
+  <%= f.text_field :continent %><br>
+
+  <%= f.label :native_language_english %><br>
+  <%= f.text_field :native_language_english %><br>
+
+  <%= f.label :demonym %><br>
+  <%= f.text_field :demonym %><br>
+
+  <%= f.submit %>
+<% end %>

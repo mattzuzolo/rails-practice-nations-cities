@@ -1,0 +1,15 @@
+<h1>Add a new town</h1>
+
+<%= form_for @town do |f| %>
+
+  <%= f.label :name %><br>
+  <%= f.text_field :name %><br>
+
+  <%= f.label :nation_id %><br>
+  <%= f.collection_select :nation_id, Nation.all, :id, :name %><br>
+
+  <%= f.label :native_language_english %><br>
+  <%= f.text_field :native_language_english %><br>
+
+  <%= f.submit %>
+<% end %>
